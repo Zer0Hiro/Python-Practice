@@ -14,6 +14,7 @@ def main():
     fourthnum = rightpart%2
     even = 4 - (firstnum + secondnum + thirdnum + fourthnum) 
     print("The amount of even digits in the number %04d is %d"%(num, even))
+    #Test github
     
     
 main()
