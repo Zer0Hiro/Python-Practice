@@ -1,11 +1,11 @@
 
 def average(a,b):
     average = float((a + b)/2) 
-    print("The average is: %.2f"%average, end=' ')
-    if average%2 != 0:
-       print("It is not an integer number.")
-    else:
+    print("The average is: %.1f."%average, end=' ')
+    if average%2 == 0:
         print("It is an integer number.")
+    else:
+        print("It is not an integer number.")
    
 def multiply(a,b):
     multi = a*b
@@ -19,14 +19,14 @@ def minimum(a,b):
         
 def maximum(a,b):
     if a > b:
-        print("The minimum is: %d"%a)
+        print("The maximum is: %d"%a)
     else: 
-        print("The minimum is: %d"%b)        
+        print("The maximum is: %d"%b)        
 
 def power(a,b):
     if b > 0:
         answer = float(a**b)
-        print("%d^%d is:"%(a,b), answer)
+        print("%d^%d is: %.1f"%(a,b,answer))
     else:
        print("Dividing by zero error") 
 
