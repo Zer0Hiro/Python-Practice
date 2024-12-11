@@ -1,8 +1,8 @@
 
 def average(a,b):
-    average = float((a + b)/2) 
+    average = ((a + b)/2) 
     print("The average is: %.1f."%average, end=' ')
-    if average%2 == 0:
+    if average%1 == 0:
         print("It is an integer number.")
     else:
         print("It is not an integer number.")
@@ -26,7 +26,7 @@ def maximum(a,b):
 def power(a,b):
     if b > 0:
         answer = float(a**b)
-        print("%d^%d is: %.1f"%(a,b,answer))
+        print("%d^%d is: %.2f"%(a,b,answer))
     else:
        print("Dividing by zero error") 
 
