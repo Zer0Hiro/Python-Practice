@@ -5,7 +5,7 @@ Created on Tue Dec 10 15:53:23 2024
 @author: motil
 """
 
-def main(): 
+def main():
     s_delta=0
     delta=0
     delta_final=0
