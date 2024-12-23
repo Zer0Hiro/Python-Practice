@@ -34,20 +34,22 @@ def clockwise_shift(number):
     rev_list = ready_list(number)
     length = len(rev_list)
     #Goes backwards from higher to lower so it moves clockwise and not ccwise
-    for i in range(length-1,0,-1):
+    for i in range(1,length):
         #Same logic as in reverse but now its closest pairs
         rev_list[i-1], rev_list[i] = rev_list[i], rev_list[i-1]
     return rev_list
 
 #Additional instruction (Just clockwise_shift but with n>=0 repeats)
 def clockwise_shift_n(number, amount):
+    num = number
     for x in range(amount):
-        num_ls = clockwise_shift(number)
+        num_ls = clockwise_shift(num)
+        num = final_number(num_ls)
     return final_number(num_ls)
 
 #Gets numbers and creates list from them
 def build_list():
-    number = int(input("Enter integer number > 0, end with -1\n"))
+    number = int(input("Enter integer numbers > 0, end with -1\n"))
     n_lst = [number]
     while number != -1:
         number = int(input())
