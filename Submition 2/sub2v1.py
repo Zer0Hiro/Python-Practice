@@ -45,14 +45,29 @@ def clockwise_shift_n(number, amount):
         num_ls = clockwise_shift(number)
     return final_number(num_ls)
 
+#Gets numbers and creates list from them
 def build_list():
+    number = int(input("Enter integer number > 0, end with -1\n"))
+    n_lst = [number]
+    while number != -1:
+        number = int(input())
+        n_lst.append(number)
+    return n_lst
+
+#Print the initial numbers from list in one line
+def print_list(lst):
+    print("The initial list is: ", end="")
+    for i in range(len(lst)-1):
+        if i != len(lst)-2:
+            print(lst[i], end=",")
+        else:
+            print(lst[i], end="")
+
+#
+def shift_all(lst):
+    
     
 def main():
-    number = int(input("Enter your number: "))
-    
-    #n = int(input("How many times do you want to move your numbers? (integer >= 0): "))
-    #clockwise_shift(number)
-    #print("Number after clockwise shift with %d times equal:"%(n), clockwise_shift_n(number, n))
-    
+    print_list(build_list())
     
 main()
