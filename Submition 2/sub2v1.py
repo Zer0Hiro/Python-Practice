@@ -40,7 +40,7 @@ def clockwise_shift(number):
     return rev_list
 
 #Additional instruction (Just clockwise_shift but with n>=0 repeats)
-def clockwise_shift_n(number, amount): 
+def clockwise_shift_n(number, amount):
     for x in range(amount):
         num_ls = clockwise_shift(number)
     return final_number(num_ls)
@@ -62,12 +62,22 @@ def print_list(lst):
             print(lst[i], end=",")
         else:
             print(lst[i], end="")
+    print()
 
-#
+#Activates clockwise function that moves number index of number(i) times 
 def shift_all(lst):
-    
-    
+    print("The list after it's items clockwise shifting is: ", end="")
+    print(lst[0], end=",")
+    for i in range(1,len(lst)-1):
+        if i != len(lst)-2:
+            print(clockwise_shift_n(lst[i],i), end=",")
+        else:
+            print(clockwise_shift_n(lst[i],i), end="")
+            
+#Use everything together   
 def main():
-    print_list(build_list())
+    lst = build_list()
+    print_list(lst)
+    shift_all(lst)
     
 main()
