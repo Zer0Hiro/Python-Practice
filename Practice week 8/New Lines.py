@@ -4,7 +4,8 @@ def no_space(msg):
             print()
         else:
             print(msg[i], end="")
-            
+    print()
+ 
 def main():
     n = 0
     while n == 0:
