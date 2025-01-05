@@ -19,7 +19,10 @@ def max_occurrences(text,lst):
        #Storage
        if count > maximum:
            maximum = count
-           index = x      
+           index = x
+       elif count == maximum:
+           if lst[index] >= lst[x]:
+               index = x
     return lst[index] 
 
 #Main function, gets main string and amount of parts at the end shows which part appears most of the time
