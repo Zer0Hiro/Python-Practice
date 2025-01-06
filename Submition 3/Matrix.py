@@ -1,3 +1,6 @@
+#Dmitry Chybisov 342744869
+#Yelyzaveta Kytaieva 342794039
+
 #    row       col
 #ar[index][under index]
 
@@ -47,8 +50,8 @@ def main():
            temp.append(input())
        mat.append(temp)
    #Start to check if its periodic
-   for xr in range(1,len(mat)):
-       for xc in range(1,len(mat[0])):
+   for xr in range(1,len(mat)-1):
+       for xc in range(1,len(mat[0])-1):
            if is_periodic(mat, xr, xc) != False:
                bestr = xr
                bestc = xc
