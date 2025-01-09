@@ -7,11 +7,11 @@ def perfect(matrix):
         lNum = []
         for c in range(len(matrix)):
             #Rows Checker
-            if matrix[r][c] in rNum or matrix[r][c] > len(matrix):
+            if matrix[r][c] in rNum or 1 > matrix[r][c] or matrix[r][c] > len(matrix):
                 return False
             rNum.append(matrix[r][c])
             #Lines Checker
-            if matrix[c][r] in lNum or matrix[c][r] > len(matrix):
+            if matrix[c][r] in lNum or 1 > matrix[c][r] or matrix[c][r] > len(matrix):
                 return False
             lNum.append(matrix[c][r])
         #Same numbers in row and column
