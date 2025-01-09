@@ -7,11 +7,11 @@ def perfect(matrix):
         lNum = []
         for c in range(len(matrix)):
             #Rows Checker
-            if matrix[r][c] in rNum:
+            if matrix[r][c] in rNum or matrix[r][c] > len(matrix):
                 return False
             rNum.append(matrix[r][c])
             #Lines Checker
-            if matrix[c][r] in lNum:
+            if matrix[c][r] in lNum or matrix[c][r] > len(matrix):
                 return False
             lNum.append(matrix[c][r])
         #Same numbers in row and column
@@ -25,7 +25,7 @@ def main():
     flag = 1
     while flag != 0:
         dim = int(input("Enter the matrix dimension: "))
-        if dim == 0:
+        if dim < 1:
             flag = 0
             return print("Finish")
         print("Enter the entries rowwise:")
@@ -50,4 +50,3 @@ def main():
             print("The Matrix is not perfect")
 
 main()
-#print(perfect([[1,3,4],[2,1,3],[3,2,1]]))
