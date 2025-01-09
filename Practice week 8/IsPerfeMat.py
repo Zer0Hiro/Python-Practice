@@ -14,7 +14,7 @@ def perfect(matrix):
             if matrix[c][r] in lNum:
                 return False
             lNum.append(matrix[c][r])
-        #Same numbers in row and column 
+        #Same numbers in row and column
         for i in range(len(matrix)):
             if rNum[i] not in lNum or lNum[i] not in rNum:
                 return False
