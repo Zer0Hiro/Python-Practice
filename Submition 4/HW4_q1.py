@@ -27,7 +27,7 @@ def num_of_palindromes(str,start,end,pali_lst):
     if is_palindrome(str,start,end) == True:
         if is_in(str,pali_lst,0) != True:
             pali_lst.append(str)
-    
+
 
 
 def recursive_sts_lst_input(lst):
