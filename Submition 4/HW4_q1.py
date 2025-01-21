@@ -21,6 +21,8 @@ def is_palindrome(str, start, stop):
 def is_in(str, str_lst, index):
     # Starts to check from the end of the list
     num = len(str_lst) - 1
+    if index > num:
+        return False
     if index == num:
         return str == str_lst[index]
     if str == str_lst[index]:
