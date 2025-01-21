@@ -4,8 +4,10 @@ def is_palindrome(str, start, stop):
     if str[start] == str[stop]:
         # If start == stop then they are at the same letter
         # "a" is a palindrome then it will always be True
-        #ABBA
-        if stop-start == 1 or start == stop:
+
+        # If the amount of letters even
+        # check if 2 closest letter will also be checked
+        if stop - start == 1 or start == stop:
             return True
         if stop == 0:
             return False
@@ -25,21 +27,29 @@ def is_in(str, str_lst, index):
         return is_in(str, str_lst[:num], index)
     return False
 
-def palindrome_runner(str,start,end,lst):
+#Additional function for num_of_palindromes
+#Slice with specific size
+def palindrome_runner(str, start, end, lst):
+    #If end gets to the length of str
+    #Then it's out of index range => return lst of the function
     if end == len(str):
         return lst
+    #If it's palindrome and is not in the list
+    #Add to the list
     if is_palindrome(str, start, end):
         temp = str[start:end + 1]
         if not is_in(temp, lst, 0):
             lst.append(temp)
-    return palindrome_runner(str, start + 1, end + 1,lst)
+    return palindrome_runner(str, start + 1, end + 1, lst)
 
-
+#Creates size of scan for palindrome_runner
 def num_of_palindromes(str, start, end, pali_lst):
+    #When end is as big as string returns the size of the list
+    #list consists under palindrome parts
     if end == len(str):
         return len(pali_lst)
-    pali_lst = palindrome_runner(str,start,end,pali_lst)
-    return num_of_palindromes(str,start,end+1,pali_lst)
+    pali_lst = palindrome_runner(str, start, end, pali_lst)
+    return num_of_palindromes(str, start, end + 1, pali_lst)
 
 
 def recursive_sts_lst_input(lst):
@@ -57,5 +67,6 @@ def main():
     for st in lst:
         palindromes_lst = []
         print("The number of palindroms in'%s' is %d" % (st, num_of_palindromes(st, 0, 0, palindromes_lst)))
+
 
 main()
