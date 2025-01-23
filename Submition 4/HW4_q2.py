@@ -20,6 +20,7 @@ def is_wrapped_lst(lst):
         return is_wrapped_lst(lst[1:-1])
     return False
 
+
 # Sort numbers to even and odd numbers
 # Creates a list of sorted numbers
 # EVEN numbers and then ODD numbers
@@ -32,6 +33,7 @@ def even_odd_sort(lst, evenl, oddl):
         oddl.append(lst[0])
     return even_odd_sort(lst[1:], evenl, oddl)
 
+
 # Check if lst is sorted
 # EVEN on Left
 # ODD on Right
@@ -43,6 +45,7 @@ def is_even_odd_sorted(lst, index):
         return False
     return is_even_odd_sorted(lst, index + 1)
 
+
 # Creates a list from inputs of user
 # Fixed amount of inputs
 def recursive_input_list(lst, n):
@@ -50,6 +53,7 @@ def recursive_input_list(lst, n):
         return lst
     lst.append(int(input()))
     return recursive_input_list(lst, n - 1)
+
 
 # Main Function
 # Fixed code
