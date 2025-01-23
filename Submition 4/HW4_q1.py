@@ -1,3 +1,6 @@
+#Dmitry Chybisov 342744869
+#Yelyzaveta Kytaieva 342794039
+
 # Check if string is palindrome
 # If yes returns TRUE
 def is_palindrome(str, start, stop):
@@ -67,6 +70,7 @@ def recursive_sts_lst_input(lst):
 
 
 # Main function
+# Fixed code
 def main():
     lst = []
     print("Please enter strings, separated by new lines. Enter an empty string for stop inputing: ")
