@@ -19,7 +19,7 @@ def legal(str):
 def main():
     str = input("Please enter a string:")
     if legal(str):
-        print("The string %s corresponds to the number %d." %(str, check_num(str)))
+        print('The string "%s" corresponds to the number %d.' %(str, check_num(str)))
     else:
         print("The string is illegal!")
 

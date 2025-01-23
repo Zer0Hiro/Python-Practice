@@ -17,7 +17,7 @@ def is_prefix(str, pref):
 def main():
     string = input("Enter a string:")
     pref = input("Enter another string:")
-    if is_prefix(string, pref):
+    if pref != "" and is_prefix(string, pref):
         print("%s is a prefix of %s" % (pref, string))
     else:
         print("%s is not a prefix of %s" % (pref, string))
