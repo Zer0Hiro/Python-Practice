@@ -8,8 +8,9 @@ def is_all_let(str):
         return is_all_let(str[1:])
     return False
 
-#Gets the string and sends it to is_all_let function
-#Print if legal or not
+
+# Gets the string and sends it to is_all_let function
+# Print if legal or not
 # letters only == LEGAL else != LEGAL
 def main():
     str = input("Please enter a string:")
