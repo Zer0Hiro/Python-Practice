@@ -1,6 +1,6 @@
 # Dmitry Chybisov 342744869
 # Yelyzaveta Kytaieva 342794039
-from os import lstat
+
 
 
 # Sum of every number in list
