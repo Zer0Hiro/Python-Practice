@@ -14,7 +14,6 @@ def is_palindrome(str, start, stop):
         return is_palindrome(str, start + 1, stop - 1)
     return False
 
-
 # Check if string is part of the list
 # If string is a part of the list and
 # index in the list is >= to the index returns True
