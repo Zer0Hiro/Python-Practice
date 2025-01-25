@@ -1,6 +1,3 @@
-#Dmitry Chybisov 342744869
-#Yelyzaveta Kytaieva 342794039
-
 # Check if string is palindrome
 # If yes returns TRUE
 def is_palindrome(str, start, stop):
