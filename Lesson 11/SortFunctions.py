@@ -1,10 +1,11 @@
+# Closest numbers sorter
 def bubble(lst):
     for j in range(len(lst) - 1):
         for i in range(len(lst) - 1):
             if lst[i] > lst[i + 1]:
                 lst[i], lst[i + 1] = lst[i + 1], lst[i]
 
-
+# Find the biggest number and put it at the end of list
 def max_sort(lst):
     n = len(lst)
     for i in range(n - 1):
@@ -15,5 +16,16 @@ def max_sort(lst):
         lst[n - 1 - i], lst[maximum] = lst[maximum], lst[n - 1 - i]
     return lst
 
+# Sorted list expansion
+def insertionSort(lst):
+    for i in range(1, len(lst)):
+        num = lst[i]
+        x = i - 1
+        while x >= 0 and num < lst[x]:
+            lst[x + 1] = lst[x]
+            x -= 1
+        lst[x + 1] = num
+    return lst
 
-print(max_sort([1, 5, 2, 7, 3, 9]))
+
+print(insertionSort([1, 5, 2, 7, 3, 9]))
