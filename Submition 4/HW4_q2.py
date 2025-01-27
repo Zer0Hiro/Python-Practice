@@ -2,7 +2,6 @@
 # Yelyzaveta Kytaieva 342794039
 
 
-
 # Sum of every number in list
 def sum_lst(lst):
     if len(lst) == 0:
@@ -21,12 +20,23 @@ def is_wrapped_lst(lst):
     return False
 
 
+def group_lsts(main, evenl, oddl):
+    if len(oddl) == 0:
+        return main
+    if len(evenl) == 0:
+        main.append(oddl[0])
+        return group_lsts(main, evenl, oddl[1:])
+    else:
+        main.append(evenl[0])
+        return group_lsts(main, evenl[1:], oddl)
+
+
 # Sort numbers to even and odd numbers
 # Creates a list of sorted numbers
 # EVEN numbers and then ODD numbers
 def even_odd_sort(lst, evenl, oddl):
     if len(lst) == 0:
-        return evenl + oddl
+        return group_lsts([], evenl, oddl)
     if lst[0] % 2 == 0:
         evenl.append(lst[0])
     else:
@@ -76,6 +86,5 @@ def main():
     print(lst)
     if not is_even_odd_sorted(lst, 0):
         print("There is a bug")
-
 
 main()
