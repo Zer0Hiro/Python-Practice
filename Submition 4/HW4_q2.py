@@ -19,6 +19,7 @@ def is_wrapped_lst(lst):
         return is_wrapped_lst(lst[1:-1])
     return False
 
+
 # Connect groups together
 def group_lsts(result, evenl, oddl):
     if len(oddl) == 0:
@@ -86,5 +87,6 @@ def main():
     print(lst)
     if not is_even_odd_sorted(lst, 0):
         print("There is a bug")
+
 
 main()
