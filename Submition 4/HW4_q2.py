@@ -19,16 +19,16 @@ def is_wrapped_lst(lst):
         return is_wrapped_lst(lst[1:-1])
     return False
 
-
-def group_lsts(main, evenl, oddl):
+# Connect groups together
+def group_lsts(result, evenl, oddl):
     if len(oddl) == 0:
-        return main
+        return result
     if len(evenl) == 0:
-        main.append(oddl[0])
-        return group_lsts(main, evenl, oddl[1:])
+        result.append(oddl[0])
+        return group_lsts(result, evenl, oddl[1:])
     else:
-        main.append(evenl[0])
-        return group_lsts(main, evenl[1:], oddl)
+        result.append(evenl[0])
+        return group_lsts(result, evenl[1:], oddl)
 
 
 # Sort numbers to even and odd numbers
