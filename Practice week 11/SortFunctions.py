@@ -28,3 +28,21 @@ def csort(lst):
 
 
 # print(csort([2, 1, 0, 5, 5, 1, 5, 4]))
+
+def ident(lst):
+    lst.sort()
+    for i in range(len(lst)):
+        if lst[i] == lst[i + 1]:
+            return True
+    return False
+
+# print(ident([4,8,1,9,14,1]))
+
+def triple(lst):
+    result = []
+    for i in range(len(lst)-2):
+        result.append(lst[i]+lst[i+1]+lst[i+2])
+    return ident(result)
+
+# print(triple([1,2,3,5,6,7,8,9,0,3,2,1]))
+
