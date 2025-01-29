@@ -8,6 +8,7 @@ def add_lst(lst, x):
     if x <= lst[n]:
         return add_lst(lst[:n], x) + lst[n:]
     elif x >= lst[0]:
+
         lst.append(x)
         return lst
 
