@@ -1,4 +1,5 @@
-# n+nlogn => O(nlogn)
+# n+nlogn => O(nlogn) Time complexity
+# O(1) Space complexity
 # Sorts list and creates the biggest possible number
 def biggest_num(lst):
     lst.sort()
