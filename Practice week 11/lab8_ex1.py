@@ -1,3 +1,11 @@
+# Connect groups together
+def group_lsts(leftl, rightl):
+    if len(rightl) == 0:
+        return leftl
+    leftl.append(rightl[0])
+    return group_lsts(leftl, rightl[1:])
+
+
 # Adds number to sorted position
 def add_lst(lst, x):
     n = len(lst) - 1
@@ -6,11 +14,12 @@ def add_lst(lst, x):
         return lst
     # Tries to fit x between numbers in list
     if x <= lst[n]:
-        return add_lst(lst[:n], x) + lst[n:]
+        return group_lsts(add_lst(lst[:n], x), lst[n:])
     elif x >= lst[0]:
 
         lst.append(x)
         return lst
+
 
 # Gets 5 elements and number that user wants to add to list
 def main():
@@ -22,5 +31,6 @@ def main():
     # Enter the number that user want to add to the list
     num = int(input("Enter new number: "))
     print("The New List:", add_lst(lst, num))
+
 
 main()
