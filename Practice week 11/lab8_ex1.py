@@ -16,7 +16,6 @@ def add_lst(lst, x):
     if x <= lst[n]:
         return group_lsts(add_lst(lst[:n], x), lst[n:])
     elif x >= lst[0]:
-
         lst.append(x)
         return lst
 
